@@ -1,0 +1,48 @@
+{
+  "name": "token-exchange",
+  "version": "1.0.0",
+  "description": "Token交易平台 - 去中心化Token交易市场",
+  "author": "Token Master Team",
+  "entry": "exchange.py",
+  "commands": [
+    {
+      "name": "market",
+      "description": "查看市场行情"
+    },
+    {
+      "name": "buy",
+      "description": "发布买单购买Token"
+    },
+    {
+      "name": "sell",
+      "description": "发布卖单出售Token"
+    },
+    {
+      "name": "orders",
+      "description": "查看我的订单"
+    },
+    {
+      "name": "balance",
+      "description": "查看余额"
+    },
+    {
+      "name": "deposit",
+      "description": "托管Token"
+    },
+    {
+      "name": "rent",
+      "description": "租赁Token"
+    },
+    {
+      "name": "swap",
+      "description": "兑换Token"
+    },
+    {
+      "name": "history",
+      "description": "查看交易历史"
+    }
+  ],
+  "dependencies": [],
+  "homepage": "http://token-master.cn/shop/",
+  "tags": ["token", "exchange", "trading", "marketplace"]
+}

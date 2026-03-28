@@ -1,57 +1,78 @@
----
-name: token-exchange
-description: Token Exchange - C2C API quota trading platform. Users can buy and sell unused API quotas with escrow and reputation system.
----
+# Token交易平台技能 (Token Exchange)
 
-# Token转让市场
+去中心化Token交易市场，支持Token额度买卖、租赁、托管和兑换。
 
-C2C API额度交易平台
+## 核心功能
 
-## 功能
+### 1. Token额度交易
+- 买卖AI平台Token额度
+- 支持OpenAI、Anthropic、Google等主流平台
+- 实时价格发现
 
-- ✅ 挂单出售/求购
-- ✅ 托管交易
-- ✅ 信誉系统
-- ✅ 市场行情
-- ✅ 多平台支持
+### 2. Token租赁
+- 短期租赁Token额度
+- 按小时/天计费
+- 到期自动回收
 
-## 使用
+### 3. Token托管
+- 第三方托管服务
+- 安全存储Token
+- 按需分发
+
+### 4. Token兑换
+- 不同平台Token互换
+- 汇率自动计算
+- 即时到账
+
+### 5. 订单簿
+- 挂单买卖
+- 市价成交
+- 交易历史
+
+## 交易对
+
+| 交易对 | 说明 |
+|--------|------|
+| OPENAI/USD | OpenAI Token额度 |
+| ANTHROPIC/USD | Anthropic Token额度 |
+| GEMINI/USD | Google Gemini Token额度 |
+| ALIBABA/USD | 阿里云Token额度 |
+| BAIDU/USD | 百度Token额度 |
+
+## 使用示例
 
 ```bash
-# 查看行情
-python main.py market
+# 查看市场行情
+token-exchange market
 
-# 出售额度
-python main.py sell --user u001 --platform openai --amount 100 --price 0.9
+# 发布卖单
+token-exchange sell --platform openai --amount 1000000 --price 0.002
 
-# 求购额度
-python main.py buy --user u002 --platform moonshot --amount 50 --price 0.008
+# 发布买单
+token-exchange buy --platform openai --amount 500000 --price 0.0018
 
-# 接受订单
-python main.py accept --order ORD123 --user u002
+# 租赁Token
+token-exchange rent --platform anthropic --amount 100000 --duration 24h
 
-# 查看统计
-python main.py stats
+# 托管Token
+token-exchange deposit --platform openai --amount 1000000
+
+# 兑换Token
+token-exchange swap --from openai --to anthropic --amount 100000
+
+# 查看我的订单
+token-exchange orders
+
+# 查看交易历史
+token-exchange history
 ```
 
-## 支持平台
+## Token经济生态
 
-| 平台 | 货币 | 最小交易 |
-|------|------|----------|
-| OpenAI | USD | 5 |
-| Moonshot | CNY | 10 |
-| ByteDance | CNY | 10 |
+- **Token Master**: Token压缩优化
+- **Compute Market**: 算力交易市场
+- **Token Consumer Optimizer**: 消费优选决策
+- **Token Auditor**: 审计监控
+- **Token Exchange**: Token交易平台 (本技能)
 
-## 交易流程
-
-1. 卖方挂单 (sell)
-2. 买方接受订单 (accept)
-3. 买方付款并确认
-4. 卖方交付API密钥
-5. 买方确认收货
-6. 平台释放资金
-
-## 费率
-
-- 平台手续费: 5%
-- 提现手续费: 1%
+**Version:** 1.0.0
