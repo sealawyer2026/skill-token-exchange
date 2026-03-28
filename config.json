@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "exchange": {
+    "platform_fee": 0.05,
+    "withdrawal_fee": 0.01,
+    "min_order_amount": 10,
+    "escrow_duration": 86400
+  },
+  "supported_tokens": [
+    {
+      "id": "openai",
+      "name": "OpenAI API额度",
+      "unit": "USD",
+      "min_trade": 5
+    },
+    {
+      "id": "moonshot",
+      "name": "Kimi API额度",
+      "unit": "CNY",
+      "min_trade": 10
+    },
+    {
+      "id": "bytedance",
+      "name": "豆包 API额度",
+      "unit": "CNY",
+      "min_trade": 10
+    }
+  ],
+  "reputation": {
+    "initial_score": 100,
+    "bonus_per_trade": 1,
+    "penalty_dispute": 10
+  }
+}
