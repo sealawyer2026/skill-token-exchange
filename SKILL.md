@@ -1,6 +1,18 @@
-# Token交易平台技能 (Token Exchange)
+# Token交易平台技能 v2.0 (Token Exchange)
 
-去中心化Token交易市场，支持Token额度买卖、租赁、托管和兑换。
+去中心化Token交易市场 v2.0，支持Token额度买卖、租赁、托管和兑换。
+
+**Version:** 2.0.0
+
+## 新特性 v2.0
+
+- ✅ 订单簿系统 (买卖盘深度)
+- ✅ 价格撮合引擎 (自动撮合)
+- ✅ 钱包管理系统 (余额/锁定/结算)
+- ✅ 实时行情 (WebSocket推送)
+- ✅ 24小时统计 (高低点/成交量)
+- ✅ API接口 (RESTful)
+- ✅ 统一数据模型 (token-ecosys-core)
 
 ## 核心功能
 
@@ -73,6 +85,6 @@ token-exchange history
 - **Compute Market**: 算力交易市场
 - **Token Consumer Optimizer**: 消费优选决策
 - **Token Auditor**: 审计监控
-- **Token Exchange**: Token交易平台 (本技能)
+- **Token Exchange**: Token交易平台 (本技能) v2.0
 
-**Version:** 1.0.0
+**Version:** 2.0.0
